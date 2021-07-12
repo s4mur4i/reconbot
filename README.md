@@ -22,11 +22,7 @@ Reconbot does not provide a way to authenticate an account to an application, so
 
 When registering the application take note of the `Client ID` and `Secret Key`, as they are necessary for Reconbot to establish communication with ESI API.
 
-## 2. Slack or Discord chat tools
-
-### Slack
-
-To add a Slack integration, check out [this Slack documentation page on Bot Users](https://api.slack.com/bot-users) (or [create bot user for your workspace](https://my.slack.com/services/new/bot)). Take note of the API token.
+## 2.Discord chat tools
 
 ### Discord
 
@@ -52,10 +48,10 @@ Use it with `DiscordNotifier` as seen in `run.py` example.
 1. Clone this repository
 2. Create a virtualenv environment: `virtualenv -p python3 venv`
 3. Activate the virtualenv environment: `source venv/bin/activate`. This will isolate reconbot's dependencies from the rest of your system's dependencies.
-4. Install Python depdendencies: `pip install -r requirements.txt`
+4. Install Python depdendencies: `pip3 install -r requirements.txt`
 5. Modify `run.py` with your EVE API keys, key groups and Slack/Discord accounts/channels.
   `whitelist` should contain notification types you're interested in (or `None` to allow all supported types), and `characters` should contain entries for API keys of individual characters.
-6. Execute `python run.py` and wait for notifications to arrive! After the character gets a notification in-game, `reconbot` may take up to 10 minutes to detect the notification.
+6. Execute `python3 run.py` and wait for notifications to arrive! After the character gets a notification in-game, `reconbot` may take up to 10 minutes to detect the notification.
 
 # Other notes
 

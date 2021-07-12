@@ -4,3 +4,5 @@ PyYAML
 requests
 schedule
 discord.py
+python-dotenv
+

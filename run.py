@@ -1,3 +1,7 @@
+from dotenv import load_dotenv
+
+load_dotenv()  # take environment variables from .env.
+
 import os
 
 import schedule
@@ -45,7 +49,7 @@ eve_apis = {
         'characters': {
             's4mur4ri-test': {
                 'character_name': os.environ.get('CHARACTER_NAME'),
-                'character_id': os.environ.get('CHARACTER_ID'),
+                'character_id': int(os.environ.get('CHARACTER_ID')),
                 'refresh_token': os.environ.get('CHARACTER_REFRESH_TOKEN')
             }
         },
