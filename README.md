@@ -118,4 +118,17 @@ As of writing this tool there is little documentation about the types of notific
 - KillReportFinalBlow
 - AllianceCapitalChanged
 
-Do you have sample contents of currently unsupported notification types? Consider sharing them by creating an issue, or submit a Pull Request. Any help would be appreciated!
+## Docker 
+
+following env variables are needed
+
+| Variable  | Function |
+| ------------- | ------------- |
+| DISCORD_URL  | Webhook url for posting messages  |
+| CLIENT_ID  | eve application client id  |
+| CLIENT_SECRET  | eve application client secret  |
+| CHARACTER_NAME  | Character name  |
+| CHARACTER_ID  |  Character id |
+| CHARACTER_REFRESH_TOKEN  | refresh token  |
+
+Refresh token can be goten with following guide: https://www.fuzzwork.co.uk/2017/03/14/using-esi-google-sheets/
