@@ -11,6 +11,7 @@ import sqlite3
 from reconbot.tasks import esi_notification_task
 from reconbot.notifiers.caching import CachingNotifier
 from reconbot.notifiers.discord import DiscordNotifier
+from reconbot.notifiers.stdout import StdOutNotifier
 from reconbot.notifiers.discordwebhook import DiscordWebhookNotifier
 from reconbot.notifiers.splitter import SplitterNotifier
 from reconbot.notifiers.filter import FilterNotifier
@@ -60,7 +61,8 @@ my_discord_channels = CachingNotifier(
     SplitterNotifier([
         DiscordWebhookNotifier(
             discord['test-server']['url']
-        )
+        ),
+        StdOutNotifier()
     ]),
     duration=3600
 )

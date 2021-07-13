@@ -74,6 +74,7 @@ class Printer(object):
             'KillReportVictim': self.kill_report_victim,
             'KillReportFinalBlow': self.kill_report_final_blow,
             'AllianceCapitalChanged': self.alliance_capital_changed,
+            'WarDeclared': self.war_declared,
 
             # kept for older messages
             'notificationTypeMoonminingExtractionStarted': self.moon_extraction_started,
@@ -95,6 +96,8 @@ class Printer(object):
     def declare_war(self):
         return '{0:get_character(charID)} from {0:get_corporation_or_alliance(entityID)} has declared war to {0:get_corporation_or_alliance(defenderID)}'
 
+    def war_declared(self):
+        return '{0:get_corporation_or_alliance(declaredByID)} has declared war to {0:get_corporation_or_alliance(againstID)}'
 
     def corporation_war_invalidated(self):
         return 'War has been invalidated to {0:get_corporation_or_alliance(againstID)} by {0:get_corporation_or_alliance(declaredByID)}'
