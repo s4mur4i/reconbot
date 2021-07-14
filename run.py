@@ -45,7 +45,16 @@ sso_app = {
 eve_apis = {
     'all': {
         'notifications': {
-            'whitelist': None, # allow all notification types
+            'whitelist': [
+                'StructureUnderAttack',
+                'StructureFuelAlert',
+                "WarAdopted",
+                "WarConcordInvalidates",
+                "WarDeclared",
+                "WarInherited",
+                "WarInvalid",
+                "WarRetracted"
+            ]
         },
         'characters': {
             's4mur4ri-test': {

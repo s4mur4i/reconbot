@@ -226,15 +226,15 @@ class Printer(object):
             'StructuresReinforcementChanged' : self.unknown,
             'TransactionReversalMsg' : self.unknown,
             'TutorialMsg' : self.unknown,
-            'WarAdopted' : self.unknown,
+            'WarAdopted' : self.war_adopted,
             'WarAllyInherited' : self.unknown,
             'WarAllyOfferDeclinedMsg' : self.unknown,
-            'WarConcordInvalidates' : self.unknown,
+            'WarConcordInvalidates' : self.war_concord_invalidates,
             'WarEndedHqSecurityDrop' : self.unknown,
             'WarHQRemovedFromSpace' : self.unknown,
-            'WarInherited' : self.unknown,
-            'WarInvalid' : self.unknown,
-            'WarRetracted' : self.unknown,
+            'WarInherited' : self.war_inherited,
+            'WarInvalid' : self.war_invalid,
+            'WarRetracted' : self.war_retracted,
             'WarRetractedByConcord' : self.unknown,
             'WarSurrenderDeclinedMsg' : self.unknown,
             'WarSurrenderOfferMsg' : self.unknown,
@@ -261,6 +261,21 @@ class Printer(object):
 
     def war_declared(self):
         return '{0:get_corporation_or_alliance(declaredByID)} has declared war to {0:get_corporation_or_alliance(againstID)}'
+
+    def war_invalid(self):
+        return '{0:get_corporation_or_alliance(declaredByID)} has invalid war to {0:get_corporation_or_alliance(againstID)}'
+
+    def war_retracted(self):
+        return '{0:get_corporation_or_alliance(declaredByID)} has retracted war to {0:get_corporation_or_alliance(againstID)}'
+
+    def war_adopted(self):
+        return '{0:get_corporation_or_alliance(declaredByID)} has adopted war to {0:get_corporation_or_alliance(againstID)}'
+
+    def war_inherited(self):
+        return '{0:get_corporation_or_alliance(declaredByID)} has inherited war to {0:get_corporation_or_alliance(againstID)}'
+
+    def war_concord_invalidates(self):
+        return '{0:get_corporation_or_alliance(declaredByID)}\'s war was invalidated to {0:get_corporation_or_alliance(againstID)}'
 
     def corporation_war_invalidated(self):
         return 'War has been invalidated to {0:get_corporation_or_alliance(againstID)} by {0:get_corporation_or_alliance(declaredByID)}'
