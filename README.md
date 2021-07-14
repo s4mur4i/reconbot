@@ -132,3 +132,30 @@ following env variables are needed
 | CHARACTER_REFRESH_TOKEN  | refresh token  |
 
 Refresh token can be goten with following guide: https://www.fuzzwork.co.uk/2017/03/14/using-esi-google-sheets/
+
+## How to use
+
+Create a file named `.env` with content in root place:
+```angular2html
+DISCORD_URL=https://discord.com/api/webhooks/xxxx
+CLIENT_ID=xxx
+CLIENT_SECRET=xxx
+CHARACTER_NAME=xxx
+CHARACTER_ID=xxx
+CHARACTER_REFRESH_TOKEN=xxx-xxx
+```
+
+Build the local container
+```angular2html
+docker build -t reconbot .
+```
+ 
+Run the container
+```angular2html
+docker run -d reconbot
+```
+
+If you want to run dockerhub version:
+```angular2html
+docker run -ti -e DISCORD_URL=https://discord.com/api/webhooks/xxx -e CLIENT_ID=xxx -e CLIENT_SECRET=xxx -e CHARACTER_NAME=xxx -e CHARACTER_ID=xxx -e CHARACTER_REFRESH_TOKEN=xxx-xxx  s4mur4i/reconbot
+```
