@@ -157,5 +157,5 @@ docker run -d reconbot
 
 If you want to run dockerhub version:
 ```angular2html
-docker run -ti -e DISCORD_URL=https://discord.com/api/webhooks/xxx -e CLIENT_ID=xxx -e CLIENT_SECRET=xxx -e CHARACTER_NAME=xxx -e CHARACTER_ID=xxx -e CHARACTER_REFRESH_TOKEN=xxx-xxx  s4mur4i/reconbot
+docker run -d -e DISCORD_URL=https://discord.com/api/webhooks/xxx -e CLIENT_ID=xxx -e CLIENT_SECRET=xxx -e CHARACTER_NAME=xxx -e CHARACTER_ID=xxx -e CHARACTER_REFRESH_TOKEN=xxx-xxx  s4mur4i/reconbot
 ```
